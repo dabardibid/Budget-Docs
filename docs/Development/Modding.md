@@ -21,11 +21,10 @@ I hope you'll learn something and do something better for this game or, for your
 ## ❓ Prerequisites
 
 * Good PC running Windows.
-* Make sure you have UE 4.27.2 installed, I cannot help you if you have UE 5 because I NEVER USED IT.
-* Basic knowledge of Unreal Engine.
-* Basic Brain processing power.
-    * Concentrated and calm behavior is recommended.
-* Visual Studio 2022.
+* Basic computer literacy.
+* Knowledge on how to use Unreal Engine.
+    * UE 4.27.2 installed, if you use UE5 you're out of luck, good luck migrating I won't be assisting with that.
+* Visual Studio 2022 (at the time of writing this, Visual Studio 2026 has NOT been tested with this project, I recommend on getting Visual Studio 2022 anyway by clicking [here](https://aka.ms/vs/17/release/vs_community.exe)).
     * Make sure the option **Game Development with C++** is ticked inside the Visual Studio Installer 🙏🙏🙏.
 
 
@@ -50,7 +49,7 @@ I hope you'll learn something and do something better for this game or, for your
 
 ---
 
-1. **[Clone the project using Git](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) (recommended) or just download the source code as a `.zip` file and extract it.**
+1. **[Clone the project using Git](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) (recommended if you want to pull latest changes more easily) or just download the source code as a `.zip` file and extract it.**
     * If downloading as a `.zip` and not using Git, you will encounter errors with DiscordRPC since it's a [submodule](https://github.blog/open-source/git/working-with-submodules/). You will find out how to fix this problem in the infobox below including the AMD FSR plugin installation steps.
 
 2. **Make sure you've installed the required plugins inside the [.uproject](https://github.com/DavidJoacaRo/Budget-Backrooms/blob/main/BudgetBackrooms.uproject).**
@@ -73,7 +72,7 @@ Make sure to download & install the Marketplace plugins first, and then open the
 
 
 3. **You may be prompted to "rebuild" `BudgetBackrooms` when opening the project.**
-* Encountering errors?
+* Encountering errors? (troubleshooting tips below)
     * 1. You could try right-clicking `BudgetBackrooms.uproject` and selecting **Generate Visual Studio project files** then, recompile Budget Backrooms inside Visual Studio (Build > **Build BudgetBackrooms**).
             * If the build didn't succeed anyway, try reading the log and see what went wrong, make sure the C++ Plugins such as **AdvancedSteamSessions** (and a few more) are installed inside the `Plugins` folder in the source code.
     * 2. If none of the above worked, make sure you got all the plugins installed as they are used in the project.

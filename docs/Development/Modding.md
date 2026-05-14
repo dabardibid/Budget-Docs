@@ -20,13 +20,18 @@ I hope you'll learn something and do something better for this game or, for your
 
 ## ❓ Prerequisites
 
-* Good PC running Windows.
-* Basic computer literacy.
-* Knowledge on how to use Unreal Engine.
+* Decent PC running Windows 10 or better. (Windows 8/7 or older have not been tested but have fun in testing them for me :) )
+    * An [Intel CPU from the last 7 Years](https://en.wikipedia.org/wiki/List_of_Intel_processors#64-bit_processors:_Intel_64_(8th_and_9th_generation)_%E2%80%93_Coffee_Lake_microarchitecture) or an [AMD CPU from the last 7 Years](https://en.wikipedia.org/wiki/List_of_AMD_processors#Zen_core_architecture_(2017%E2%80%93present)) is recommended to compile the shaders and run the Unreal Engine.
+    * A [Graphics Card](https://en.wikipedia.org/wiki/Graphics_card) or [Discrete GPU](https://en.wikipedia.org/wiki/Graphics_processing_unit) is recommended, almost required. How are you going to run the Engine on your integrated graphics?
+    * At least 16 GB of RAM but game has been usually compiled ([on my end at least](https://de.pcpartpicker.com/user/bardid/saved/#view=2vvprH)) at around 32 GB of RAM for headroom.
+    * At least 32GB of free storage or more, normal project is around 12 GB but with shaders and all that compiled stuff it is going to stack up. It is not a fixed size so just have enough free storage.
+* Knowledge on how to use Unreal Engine
     * UE 4.27.2 installed, if you use UE5 you're out of luck, good luck migrating I won't be assisting with that.
-* Visual Studio 2022 (at the time of writing this, Visual Studio 2026 has NOT been tested with this project, I recommend on getting Visual Studio 2022 anyway by clicking [here](https://aka.ms/vs/17/release/vs_community.exe)).
+* Visual Studio 2022
     * Make sure the option **Game Development with C++** is ticked inside the Visual Studio Installer 🙏🙏🙏.
-
+:::danger
+At the time of writing this, Visual Studio 2026 does NOT work with this project it is in Unreal Engine 4.27.2 and thus the Visual Studio plugin has not been updated to work with it, I recommend on getting Visual Studio 2022  by clicking [here](https://aka.ms/vs/17/release/vs_community.exe)
+:::
 
 # 📁 Setting up the Project
 ---

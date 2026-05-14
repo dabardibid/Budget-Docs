@@ -14,8 +14,8 @@
   --ifm-color-primary-lighter: #000000;
   --ifm-color-primary-lightest: #000000;
   --ifm-navbar-background-color: #ffffff80;
-  --ifm-link-hover-color: #e3d87c;
-  --ifm-link-color: #e3d87c;
+  --ifm-link-hover-color: #b3a100;
+  --ifm-link-color: #ddc700;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */

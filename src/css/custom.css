@@ -6,7 +6,7 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-link-hover-color: var(--ifm-color-primary);
+  --ifm-link-hover-color: #e3d87c;
   --ifm-color-primary: #000000;
   --ifm-color-primary-dark: #000000;
   --ifm-color-primary-darker: #000000;

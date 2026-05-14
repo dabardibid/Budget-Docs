@@ -1,5 +1,6 @@
 ---
 slug: /docs/localization
+title: Localization
 ---
 
 

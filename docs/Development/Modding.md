@@ -21,16 +21,16 @@ I hope you'll learn something and do something better for this game or, for your
 ## ❓ Prerequisites
 
 * Decent PC running Windows 10 or better. (Windows 8/7 or older have not been tested but have fun in testing them for me :) )
-    * An [Intel CPU from the last 7 Years](https://en.wikipedia.org/wiki/List_of_Intel_processors#64-bit_processors:_Intel_64_(8th_and_9th_generation)_%E2%80%93_Coffee_Lake_microarchitecture) or an [AMD CPU from the last 7 Years](https://en.wikipedia.org/wiki/List_of_AMD_processors#Zen_core_architecture_(2017%E2%80%93present)) is recommended to compile the shaders and run the Unreal Engine.
-    * A [Graphics Card](https://en.wikipedia.org/wiki/Graphics_card) or [Discrete GPU](https://en.wikipedia.org/wiki/Graphics_processing_unit) is recommended, almost required. How are you going to run the Engine on your integrated graphics?
+    * At least an [Intel CPU from the last decade](https://en.wikipedia.org/wiki/List_of_Intel_processors#64-bit_processors:_Intel_64_(8th_and_9th_generation)_%E2%80%93_Coffee_Lake_microarchitecture) or an [AMD CPU from the last decade](https://en.wikipedia.org/wiki/List_of_AMD_processors#Zen_core_architecture_(2017%E2%80%93present)) is recommended to compile the shaders and at minimum run Unreal Engine.
+    * A [Graphics Card](https://en.wikipedia.org/wiki/Graphics_card) or [Discrete GPU](https://en.wikipedia.org/wiki/Graphics_processing_unit) is recommended, almost required. How are you going to run the UE on your integrated graphics?
     * At least 16 GB of RAM but game has been usually compiled ([on my end at least](https://de.pcpartpicker.com/user/bardid/saved/#view=2vvprH)) at around 32 GB of RAM for headroom.
-    * At least 32GB of free storage or more, normal project is around 12 GB but with shaders and all that compiled stuff it is going to stack up. It is not a fixed size so just have enough free storage.
+    * 32GB of storage and more, the repository itself is around 12 GB but with shaders and all that compiled stuff it is going to stack up. It is not a fixed size so just have enough free storage and headroom.
 * Knowledge on how to use Unreal Engine
     * UE 4.27.2 installed, if you use UE5 you're out of luck, good luck migrating I won't be assisting with that.
 * Visual Studio 2022
     * Make sure the option **Game Development with C++** is ticked inside the Visual Studio Installer 🙏🙏🙏.
 :::danger
-At the time of writing this, Visual Studio 2026 does NOT work with this project it is in Unreal Engine 4.27.2 and thus the Visual Studio plugin has not been updated to work with it, I recommend on getting Visual Studio 2022  by clicking [here](https://aka.ms/vs/17/release/vs_community.exe)
+At the time of writing this, Visual Studio 2026 does NOT work with this project because it's in Unreal Engine 4.27.2 and thus the Visual Studio plugin has not been updated to work with it (and most likely won't be updated for UE4 any time soon), I recommend on getting Visual Studio 2022  by clicking [here](https://aka.ms/vs/17/release/vs_community.exe)
 :::
 
 # 📁 Setting up the Project
@@ -47,9 +47,7 @@ At the time of writing this, Visual Studio 2026 does NOT work with this project 
 
 :::
 :::danger
-* Before that, rename the `.uproject` to anything but not BudgetBackrooms, do this <ins>ONLY if you have more copies of the source code</ins> *(like one folder with the fork source code and other the original source code).*
-    * There's this awkward bug in Unreal, that if you have the same name .uproject, shader recompilation will be re-triggered and we don't want to waste precious time.
-        * Upon further testing you might also encounter compilation errors if renamed so it is a 50/50 situation, just separate the folders if none of the above work and keep the `.uproject` as it is.
+* In the case of having multiple copies of the project, do not keep the same `.uproject` filename and project name everywhere (edited inside the `.uproject` file) since Unreal Engine geeks out and will most likely trigger shader recompilation. And thus, wasting precious time.
 :::
 
 ---
@@ -57,7 +55,7 @@ At the time of writing this, Visual Studio 2026 does NOT work with this project 
 1. **[Clone the project using Git](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) (recommended if you want to pull latest changes more easily) or just download the source code as a `.zip` file and extract it.**
     * If downloading as a `.zip` and not using Git, you will encounter errors with DiscordRPC since it's a [submodule](https://github.blog/open-source/git/working-with-submodules/). You will find out how to fix this problem in the infobox below including the AMD FSR plugin installation steps.
 
-2. **Make sure you've installed the required plugins inside the [.uproject](https://github.com/DavidJoacaRo/Budget-Backrooms/blob/main/BudgetBackrooms.uproject).**
+2. **Make sure you've installed any additional plugins required inside the [.uproject](https://github.com/DavidJoacaRo/Budget-Backrooms/blob/main/BudgetBackrooms.uproject).** (Most of them are bundled with the project anyway)
 
 :::warning
 
@@ -79,15 +77,14 @@ Make sure to download & install the Marketplace plugins first, and then open the
 3. **You may be prompted to "rebuild" `BudgetBackrooms` when opening the project.**
 * Encountering errors? (troubleshooting tips below)
     * 1. You could try right-clicking `BudgetBackrooms.uproject` and selecting **Generate Visual Studio project files** then, recompile Budget Backrooms inside Visual Studio (Build > **Build BudgetBackrooms**).
-            * If the build didn't succeed anyway, try reading the log and see what went wrong, make sure the C++ Plugins such as **AdvancedSteamSessions** (and a few more) are installed inside the `Plugins` folder in the source code.
     * 2. If none of the above worked, make sure you got all the plugins installed as they are used in the project.
-            * The paid plugin issue was solved [here](https://github.com/DavidJoacaRo/Budget-Backrooms/pull/28)
+            * The paid plugin issue was solved [here](https://github.com/DavidJoacaRo/Budget-Backrooms/pull/28).
     * 3. As mentioned above, make sure you have Visual Studio 2019-2022 installed properly, since it's required to compile everything about C++ in the game, which is being used. Inside Visual Studio Installer, you can press **Modify** at your preferred VS installation, and then make sure the option **Game Development with C++** is ticked.
 * If you don't encounter any (other) errors, proceed to rebuild without doing anything else.
 
 4. Did you get the game's splash screen?
     * Yes
-        * You are done, modify the heck of it (the game).
+        * You are done, feel free to explore around.
 
     * No
         * Backtrace your problem, and see what went wrong.
